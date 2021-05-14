@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Sign up</title>
+</head>
+    <body>
+        <div class="container">
+            <header><b>Get started today!</b></header>
+            <form onsubmit="return validation()" >
+                <div class="firstName">
+                    <label for="firstName">First name</label><br>
+                    <input type="text" title="firstname"  id="firstName" autocomplete="off">
+                    <span id="er1"> </span>
+                </div>
+                <div class="lastName">
+                    <label for="lastName">Last name</label><br>
+                    <!-- required pattern="^[A-Za-z]{3,10}$" -->
+                    <input type="text" title="lastName" id="lastName" >
+                    <span id="er2"> </span>
+                </div>
+                <div class="email">
+                    <label for="email">Email</label><br>
+                    <!-- required pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" -->
+                    <input type="text" title="email" id="email" >
+                    <span id="er3"> </span>
+                </div>
+                <div class="password">
+                    <label for="password">Password</label><br>
+                    <!-- required pattern="^[A-Za-z0-9]{8,}$" -->
+                    <input type="password" title="password" id="pass" >
+                    <span id="er4"> </span>
+                </div>
+                <div class="btn">
+                    <input type="submit"  class="button" value="Claim your free trial ▶">
+                </div>
+            </form>
+            <span id="er"> </span>
+            <div class="message"><p>You are agreeing to our <a href="#">Terms and Services</a></p></div>
+        </div>
+    </body>
+</html>
