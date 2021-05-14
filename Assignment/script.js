@@ -7,7 +7,7 @@ function validation(){
     var regPass = new RegExp("[^A-Z$|^a-z$|^0-9$]");
     if(regName.test(fname.value) || regName.test(lname.value)){
         var errorMessege = document.getElementById("er");
-        errorMessege.innerHTML = "Name can not contain any special characters or space.";
+        errorMessege.innerHTML = "Name can contain alphabets only";
         setTimeout(()=>{errorMessege.innerHTML = ""},3000);
         return false;
     }
