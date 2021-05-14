@@ -38,17 +38,17 @@ function validation(){
         setTimeout(()=>{errorMessege.innerHTML = ""},3000);
         return false;
     }
-    if(regPass.test(pass.value)||pass.value.length < 8){
-        var errorMessege = document.getElementById("er");
-        errorMessege.innerHTML = "Password must be 8 charecters long and should contain only digits and alphabets.";
-        setTimeout(()=>{errorMessege.innerHTML = ""},3000);
-        return false;
-    }
     if(pass.value == ""){
         var errorMessege = document.getElementById("er4");
         errorMessege.innerHTML = "Please enter password";
         pass.focus();
         setTimeout(()=>{errorMessege.innerHTML = ""},2000);
+        return false;
+    }
+    if(regPass.test(pass.value)||pass.value.length < 8){
+        var errorMessege = document.getElementById("er");
+        errorMessege.innerHTML = "Password must be 8 charecters long and should contain only digits and alphabets.";
+        setTimeout(()=>{errorMessege.innerHTML = ""},3000);
         return false;
     }
     else{
